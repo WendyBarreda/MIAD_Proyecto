@@ -9,14 +9,14 @@ UPLOAD_FOLDER = os.getcwd()
 
 def get_proba_adicion(args):
 
-    df = pd.DataFrame([args['Modalidad de contratación'],
-                        args['Tipo de contrato'],
-                        args['Municipio ejecución'],
-                        args['Cuantia proceso'],
-                        args['Departamento y municipio contratista'],
-                        args['Municipio entidad'],
-                        args['Departamento entidad'],
-                        args['Departamento ejecución']], 
+    df = pd.DataFrame([[args['Modalidad de contratación'],
+                                args['Tipo de contrato'],
+                                args['Municipio ejecución'],
+                                args['Cuantia proceso'],
+                                args['Departamento y municipio contratista'],
+                                args['Municipio entidad'],
+                                args['Departamento entidad'],
+                                args['Departamento ejecución']]], 
                       columns=['modalidad_contratación',
                                'tipo_de_contrato',
                                'municipio_ejecucion',
