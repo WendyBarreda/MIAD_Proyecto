@@ -26,7 +26,9 @@ def get_proba_adicion(args):
                                'departamento_entidad',
                                'departamento_ejecucion'])
     
-    get_proba_adicion_df(df)
+    prob = get_proba_adicion_df(df)
+    
+    return prob
 
 def get_proba_adicion_df(df):
     
