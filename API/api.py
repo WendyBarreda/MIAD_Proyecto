@@ -1,4 +1,6 @@
 #!/usr/bin/python
+#pip install flask-wtf -- En Console
+
 from flask import Flask, request
 from flask_restx import Api, Resource, fields
 from calculation import get_proba_adicion,get_proba_adicion_df
@@ -7,13 +9,23 @@ import os
 from werkzeug.utils import secure_filename
 import pandas as pd
 from werkzeug.datastructures import FileStorage
+import joblib
 
+from flask_wtf import FlaskForm
+from wtforms import SelectField
+from wtforms.validators import DataRequired
 
 UPLOAD_FOLDER = os.getcwd()
 ALLOWED_EXTENSIONS = set(['xlsx'])
 
+# Cargar las opciones desde el archivo opciones.pkl
+opciones_cargadas = joblib.load(os.path.dirname(__file__) + '/opciones.pkl') 
+    
 def allowed_file(filename):
 	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+class MyForm(FlaskForm):
+    departamento_ejecucion = SelectField('Departamento de Ejecución', choices=opciones_cargadas, validators=[DataRequired()])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -35,57 +47,44 @@ parser.add_argument(
     'Modalidad de contratación', 
     type=str, 
     required=True, 
-    help='Modalidad de contratación', 
+    help='Por favor ingrese un valor valido para la Modalidad de contratación', 
     location='args')
 
 parser.add_argument(
-    'Tipo de contrato', 
+    'Nivel entidad', 
     type=str, 
     required=True, 
-    help='Tipo de contrato', 
+    help='Por favor ingrese un valor valido para el Nivel de la entidad', 
     location='args')
 
 parser.add_argument(
-    'Municipio ejecución', 
+    'Orden entidad', 
     type=str, 
     required=True, 
-    help='Por favor ingrese un valor valido para el municipio de ejecución.', 
+    help='Por favor ingrese un valor valido para el Orden de la entidad.', 
     location='args')
 
 parser.add_argument(
-    'Cuantia proceso', 
+    'Nombre clase', 
+    type=str, 
+    required=True, 
+    help='Por favor ingrese un valor valido para el nombre de la clase.', 
+    location='args')
+
+parser.add_argument(
+    'Cuantia contrato', 
     type=int, 
     required=True, 
-    help='Por favor ingrese un valor valido para la cuantia del proceso.', 
-    location='args')
-
-parser.add_argument(
-    'Departamento y municipio contratista', 
-    type=str, 
-    required=True, 
-    help='Por favor ingrese un valor valido para el departamento y municipio del contratista.', 
-    location='args')
-
-parser.add_argument(
-    'Municipio entidad', 
-    type=str, 
-    required=True, 
-    help='Por favor ingrese un valor valido para el municipio de la entidad.', 
-    location='args')
-
-parser.add_argument(
-    'Departamento entidad', 
-    type=str, 
-    required=True, 
-    help='Por favor ingrese un valor valido para el departamento de la entidad.', 
+    help='Por favor ingrese un valor valido para la cuantia del contrato.', 
     location='args')
 
 parser.add_argument(
     'Departamento ejecución', 
     type=str, 
     required=True, 
-    help='Por favor ingrese un valor valido para el departamento de ejecución.', 
-    location='args')
+    help='Por favor ingrese un valor valido para el Departamento de ejecución.', 
+    location='args',
+    choices=opciones_cargadas)
 
 
 #Parametros para archivo

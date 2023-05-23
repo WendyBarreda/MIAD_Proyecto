@@ -4,26 +4,40 @@ import sys
 import os
 import numpy as np
 import pandas as pd
+import joblib
+
 
 UPLOAD_FOLDER = os.getcwd()
 
-def get_proba_adicion(args):
+def get_region(depto):
+    if depto in ["Sucre", "Magdalena", "La Guajira", "Córdoba", "Cesar", "Bolívar", "Atlántico", "San Andrés, Providencia y Santa Catalina"]:
+        return "Region_caribe"
+    elif depto in ["Quindío", "Antioquia", "Caldas", "Risaralda"]:
+        return "Region_eje_cafetero"
+    elif depto in ["Cauca", "Chocó", "Valle del Cauca", "Nariño"]:
+        return "Region_pacifica"
+    elif depto in ["Cundinamarca", "Boyacá", "Santander", "Norte de Santander", "Huila", "Tolima", "Bogotá D.C."]:
+        return "Region_central"
+    elif depto in ["Casanare", "Caquetá", "Meta", "Arauca", "Vichada"]:
+        return "Region_llanos"
+    elif depto in ["Guaviare", "Guanía", "Amazonas", "Putumayo", "Vaupés"]:
+        return "Region_amazonia"
+    else:
+        return "Multiples_departamentos"
 
-    df = pd.DataFrame([[args['Modalidad de contratación'],
-                                args['Tipo de contrato'],
-                                args['Municipio ejecución'],
-                                args['Cuantia proceso'],
-                                args['Departamento y municipio contratista'],
-                                args['Municipio entidad'],
-                                args['Departamento entidad'],
+def get_proba_adicion(args):
+    
+    df = pd.DataFrame([[args['Cuantia contrato'],
+                                args['Nivel entidad'],
+                                args['Orden entidad'],
+                                args['Modalidad de contratación'],
+                                args['Nombre clase'],
                                 args['Departamento ejecución']]], 
-                      columns=['modalidad_contratación',
-                               'tipo_de_contrato',
-                               'municipio_ejecucion',
-                               'cuantia_proceso',
-                               'departamento_y_municipio_contratista',
-                               'municipio_entidad',
-                               'departamento_entidad',
+                      columns=['cuantia_contrato',
+                               'nivel_entidad',
+                               'orden_entidad',
+                               'modalidad_de_contratacion', 
+                               'nombre_clase',
                                'departamento_ejecucion'])
     
     prob = get_proba_adicion_df(df)
@@ -32,9 +46,43 @@ def get_proba_adicion(args):
 
 def get_proba_adicion_df(df):
     
-    print(df)
+    #Preprocesamiento de los datos --------------------------------
     
-    return '0.95'
+    #Obtención de región
+    df["region_ejecucion"] = df["departamento_ejecucion"].apply(get_region)
+    df = df.drop("departamento_ejecucion", axis=1)
+    
+    #Separamos cuantia contrato 
+    cuantia_df = df[['cuantia_contrato']].copy()
+    df = df.drop('cuantia_contrato',axis=1)
+    
+    #Obtención de dummies
+    encoder, df_encoded_categorical = joblib.load(os.path.dirname(__file__) + '/encoder_and_dataframe.pkl') 
+    
+    #Codificar el nuevo registro
+    categorical_cols = ['nivel_entidad','orden_entidad','modalidad_de_contratacion','nombre_clase','region_ejecucion']
+    encoded_nuevo_registro = encoder.transform(df)
+    df_encoded = pd.DataFrame(encoded_nuevo_registro, columns=encoder.get_feature_names_out(categorical_cols))
+    
+    #Adición de la columna cuantia 
+    df_encoded = df_encoded.join(cuantia_df["cuantia_contrato"])
+    
+    #Normalización
+    scaler = joblib.load(os.path.dirname(__file__) + '/scaler.pkl') 
+    df_scaled = scaler.transform(df_encoded)
+    
+    
+    #Predicción
+    #model = joblib.load(os.path.dirname(__file__) + '/modelo_xgb.pkl') 
+    #prediccionesProb= model.predict_proba(df_scaled)
+    
+    #probabilidad = prediccionesProbXG[0, 0]
+    
+    probabilidad = '0.85'
+    
+    
+    
+    return probabilidad
 
 if __name__ == "__main__":
 
@@ -42,22 +90,17 @@ if __name__ == "__main__":
         print('Please add values')
     else:
         modalidad_contratacion = sys.argv[1]
-        tipo_de_contrato = sys.argv[2]
-        municipio_ejecucion = sys.argv[3]
-        cuantia_proceso = sys.argv[4]
-        departamento_y_municipio_contratista = sys.argv[5]
-        municipio_entidad = sys.argv[6]
-        departamento_entidad = sys.argv[7]
-        departamento_ejecucion = sys.argv[8]
+        nivel_entidad = sys.argv[2]
+        orden_entidad = sys.argv[3]
+        nombre_clase = sys.argv[4]
+        cuantia_contrato = sys.argv[5]
+        departamento_ejecucion = sys.argv[6]
         
         p1 = get_proba_adicion(modalidad_contratacion,
-                              tipo_de_contrato,
-                              municipio_ejecucion,
-                              cuantia_proceso, 
-                              departamento_y_municipio_contratista,
-                              municipio_entidad,
-                              departamento_entidad,
+                              nivel_entidad,
+                              orden_entidad,
+                              nombre_clase, 
+                              cuantia_contrato,
                               departamento_ejecucion)
         
         print('Predicción de adiciones', p1)
-        
