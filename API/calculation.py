@@ -5,6 +5,10 @@ import os
 import numpy as np
 import pandas as pd
 import joblib
+from sklearn.neural_network import MLPClassifier
+from xgboost import XGBClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 
 
 UPLOAD_FOLDER = os.getcwd()
@@ -71,15 +75,11 @@ def get_proba_adicion_df(df):
     scaler = joblib.load(os.path.dirname(__file__) + '/scaler.pkl') 
     df_scaled = scaler.transform(df_encoded)
     
-    
     #Predicción
-    #model = joblib.load(os.path.dirname(__file__) + '/modelo_xgb.pkl') 
-    #prediccionesProb= model.predict_proba(df_scaled)
+    model = joblib.load(os.path.dirname(__file__) + '/modelo_clf0.pkl') 
+    prediccionesProb= model.predict_proba(df_scaled)
     
-    #probabilidad = prediccionesProbXG[0, 0]
-    
-    probabilidad = '0.85'
-    
+    probabilidad = prediccionesProb[0, 0]
     
     
     return probabilidad
