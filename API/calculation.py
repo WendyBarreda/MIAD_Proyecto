@@ -88,6 +88,8 @@ def get_proba_adicion_df(df):
     model = joblib.load(os.path.dirname(__file__) + '/clf0.pkl') 
     prediccionesProb= model.predict_proba(df_scaled)
     
+    print(prediccionesProb)
+    
     probabilidad = prediccionesProb[0, 0]
     
     
