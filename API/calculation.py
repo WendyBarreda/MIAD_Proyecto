@@ -9,6 +9,7 @@ from sklearn.neural_network import MLPClassifier
 from xgboost import XGBClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import OneHotEncoder
 
 
 UPLOAD_FOLDER = os.getcwd()
@@ -59,9 +60,17 @@ def get_proba_adicion_df(df):
     #Separamos cuantia contrato 
     cuantia_df = df[['cuantia_contrato']].copy()
     df = df.drop('cuantia_contrato',axis=1)
+
+    # Identificar variables de tipo objeto
+    obj_cols = df.select_dtypes(include=['object']).columns
+    unique_values = joblib.load(os.path.dirname(__file__) + '/unique_values.pkl') 
+    for col in obj_cols:
+        if col in df.columns:
+            df[col] = pd.Categorical(df[col], categories=unique_values[col])
+            df[col] = df[col].cat.codes
     
     #Obtención de dummies
-    encoder, df_encoded_categorical = joblib.load(os.path.dirname(__file__) + '/encoder_and_dataframe.pkl') 
+    encoder = joblib.load(os.path.dirname(__file__) + '/encoder.pkl') 
     
     #Codificar el nuevo registro
     categorical_cols = ['nivel_entidad','orden_entidad','modalidad_de_contratacion','nombre_clase','region_ejecucion']
@@ -69,14 +78,14 @@ def get_proba_adicion_df(df):
     df_encoded = pd.DataFrame(encoded_nuevo_registro, columns=encoder.get_feature_names_out(categorical_cols))
     
     #Adición de la columna cuantia 
-    df_encoded = df_encoded.join(cuantia_df["cuantia_contrato"])
+    df_encoded = cuantia_df.join(df_encoded)
     
     #Normalización
     scaler = joblib.load(os.path.dirname(__file__) + '/scaler.pkl') 
     df_scaled = scaler.transform(df_encoded)
     
     #Predicción
-    model = joblib.load(os.path.dirname(__file__) + '/modelo_clf0.pkl') 
+    model = joblib.load(os.path.dirname(__file__) + '/clf0.pkl') 
     prediccionesProb= model.predict_proba(df_scaled)
     
     probabilidad = prediccionesProb[0, 0]
