@@ -18,14 +18,22 @@ from wtforms.validators import DataRequired
 UPLOAD_FOLDER = os.getcwd()
 ALLOWED_EXTENSIONS = set(['xlsx'])
 
-# Cargar las opciones desde el archivo opciones.pkl
-opciones_cargadas = joblib.load(os.path.dirname(__file__) + '/opciones.pkl') 
+# Cargar las distintas opciones para los drop down desde los archivos pkl
+opciones_cargadas                  = joblib.load(os.path.dirname(__file__) + '/opciones.pkl') 
+nivel_entidad_cargadas             = joblib.load(os.path.dirname(__file__) + '/lista_nivelEntidad.pkl')
+orden_entidad_cargadas             = joblib.load(os.path.dirname(__file__) + '/lista_ordenEntidad.pkl')
+modalidad_de_contratacion_cargadas = joblib.load(os.path.dirname(__file__) + '/lista_modalidadContratacion.pkl')
+nombre_clase_cargadas              = joblib.load(os.path.dirname(__file__) + '/lista_nombreClase.pkl')
     
 def allowed_file(filename):
 	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 class MyForm(FlaskForm):
-    departamento_ejecucion = SelectField('Departamento de Ejecución', choices=opciones_cargadas, validators=[DataRequired()])
+    departamento_ejecucion    = SelectField('Departamento de Ejecución', choices=opciones_cargadas, validators=[DataRequired()])
+    nivel_entidad             = SelectField('Nivel entidad', choices=nivel_entidad_cargadas, validators=[DataRequired()])
+    orden_entidad             = SelectField('Orden entidad', choices=orden_entidad_cargadas, validators=[DataRequired()])
+    modalidad_de_contratacion = SelectField('Modalidad de contratación', choices=modalidad_de_contratacion_cargadas, validators=[DataRequired()])
+    nombre_clase              = SelectField('Nombre clase', choices=nombre_clase_cargadas, validators=[DataRequired()])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -48,28 +56,32 @@ parser.add_argument(
     type=str, 
     required=True, 
     help='Por favor ingrese un valor valido para la Modalidad de contratación', 
-    location='args')
+    location='args',
+    choices=modalidad_de_contratacion_cargadas)
 
 parser.add_argument(
     'Nivel entidad', 
     type=str, 
     required=True, 
     help='Por favor ingrese un valor valido para el Nivel de la entidad', 
-    location='args')
+    location='args',
+    choices=nivel_entidad_cargadas)
 
 parser.add_argument(
     'Orden entidad', 
     type=str, 
     required=True, 
     help='Por favor ingrese un valor valido para el Orden de la entidad.', 
-    location='args')
+    location='args',
+    choices=orden_entidad_cargadas)
 
 parser.add_argument(
     'Nombre clase', 
     type=str, 
     required=True, 
     help='Por favor ingrese un valor valido para el nombre de la clase.', 
-    location='args')
+    location='args',
+    choices=nombre_clase_cargadas)
 
 parser.add_argument(
     'Cuantia contrato', 
