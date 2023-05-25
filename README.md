@@ -14,20 +14,20 @@
 
 
 <!-- TABLE OF CONTENTS -->
-## Tabla de Contenido
+## Tabla de Contenido :octocat:
 <details>
   <ol>
     <li>
-      <a href="#acerca-del-proyecto">Acerca del proyecto</a>
+      <a href="#acerca-del-proyecto-bookmark_tabs">Acerca del proyecto</a>
       <ul>
-        <li><a href="#construido-con">Construido con</a></li>
+        <li><a href="#construido-con-hammer_and_wrench">Construido con</a></li>
       </ul>
     </li>
     <li>
-      <a href="#configuración">Configuración</a>
+      <a href="#configuración-wrench">Configuración</a>
       <ul>
         <li><a href="#prerequisitos">Prerequisitos</a></li>
-        <li><a href="#instalación">Instalación</a></li>
+        <li><a href="#instalación-computer">Instalación</a></li>
       </ul>
     </li>
     <li><a href="#modo-de-uso">Modo de Uso</a></li>
@@ -38,30 +38,30 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Acerca del proyecto
+## Acerca del proyecto :bookmark_tabs:
 
 [![Product Name Screen Shot][product-screenshot]](http://ec2-44-204-2-195.compute-1.amazonaws.com:8888/)
 
 Se analizaron datos de los Procesos de Compra pública registrados en el SECOP I desde su implementación, información del proceso, fase de selección y la adjudicación. La información presentada corresponde a la categoría de datos de Estructuras y edificios permanentes del bien o servicio definido en el proceso de compra de acuerdo a sus características principales.
 La finalidad de este proyecto es construir una API que permite estimar la probabilidad que un nuevo contrato presente adiciones. 
 
-<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
+<p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
-## Construido con
+## Construido con :hammer_and_wrench:
 
 * [![Python][Python]][Python-url]
 * [![Flask][Flask]][Flask-url]
 * [![scikit-learn][scikit-learn]][scikit-learn-url]
 
-<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
+<p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-## Configuración
+## Configuración :wrench:
 
 Se necesita un ambiente python
 * Pyhton 3 o superior
 
-<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
+<p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
 ### Prerequisitos
 * Scikit-learn
@@ -75,9 +75,9 @@ Se necesita un ambiente python
   pip install Flask
   ```
 
-<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
+<p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
-### Instalación
+### Instalación :computer:
 
 1. Clona el repositorio
    ```sh
@@ -92,14 +92,14 @@ Se necesita un ambiente python
    python3 api.py
    ```
 
-<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
+<p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Modo de uso
 
 _Por favor dirigete al siguiente documento para [Documentation](https://github.com/WendyBarreda/MIAD_Proyecto/edit/main/)_
 
-<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
+<p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Desarrolladores :man_technologist: :woman_technologist:
@@ -107,7 +107,7 @@ _Por favor dirigete al siguiente documento para [Documentation](https://github.c
 * Jose Rivera
 * Wendy Barred
 
-<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
+<p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
