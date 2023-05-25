@@ -26,11 +26,11 @@
     <li>
       <a href="#configuración-wrench">Configuración</a>
       <ul>
-        <li><a href="#prerequisitos">Prerequisitos</a></li>
+        <li><a href="#prerequisitos-key">Prerequisitos</a></li>
         <li><a href="#instalación-computer">Instalación</a></li>
       </ul>
     </li>
-    <li><a href="#modo-de-uso">Modo de Uso</a></li>
+    <li><a href="#modo-de-uso-bulb">Modo de Uso</a></li>
     <li><a href="#desarrolladores-man_technologist-woman_technologist">Desarrolladores</a></li>
   </ol>
 </details>
@@ -63,7 +63,7 @@ Se necesita un ambiente python
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
-### Prerequisitos
+### Prerequisitos :key:
 * Scikit-learn
 
 ```sh
@@ -95,7 +95,7 @@ Se necesita un ambiente python
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-## Modo de uso
+## Modo de uso :bulb:
 
 _Por favor dirigete al siguiente documento para [Documentation](https://github.com/WendyBarreda/MIAD_Proyecto/edit/main/)_
 
