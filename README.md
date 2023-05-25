@@ -15,7 +15,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Tabla de contenido</summary>
   <ol>
     <li>
       <a href="#acerca-del-proyecto">Acerca del proyecto</a>
@@ -45,9 +45,7 @@
 Se analizaron datos de los Procesos de Compra pública registrados en el SECOP I desde su implementación, información del proceso, fase de selección y la adjudicación. La información presentada corresponde a la categoría de datos de Estructuras y edificios permanentes del bien o servicio definido en el proceso de compra de acuerdo a sus características principales.
 La finalidad de este proyecto es construir una API que permite estimar la probabilidad que un nuevo contrato presente adiciones. 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
 
 ## Construido con
 
@@ -55,15 +53,15 @@ La finalidad de este proyecto es construir una API que permite estimar la probab
 * [![Flask][Flask]][Flask-url]
 * [![scikit-learn][scikit-learn]][scikit-learn-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Configuración
 
 Se necesita un ambiente python
 * Pyhton 3 o superior
+
+<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
 
 ### Prerequisitos
 * Scikit-learn
@@ -76,6 +74,8 @@ Se necesita un ambiente python
 ```sh
   pip install Flask
   ```
+
+<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
 
 ### Instalación
 
@@ -92,17 +92,14 @@ Se necesita un ambiente python
    python3 api.py
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Modo de uso
 
 _Por favor dirigete al siguiente documento para [Documentation](https://github.com/WendyBarreda/MIAD_Proyecto/edit/main/)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Desarrolladores :man_technologist: :woman_technologist:
@@ -110,11 +107,7 @@ _Por favor dirigete al siguiente documento para [Documentation](https://github.c
 * Jose Rivera
 * Wendy Barred
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
+<p align="right">(<a href="#tabla-de-contenido">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
