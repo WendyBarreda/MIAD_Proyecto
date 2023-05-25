@@ -1,13 +1,10 @@
 # Caracterización de adiciones para procesos de contratación publica en infraestructura
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/WendyBarreda/MIAD_Proyecto">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 </div>
@@ -97,7 +94,7 @@ Se necesita un ambiente python
 <!-- USAGE EXAMPLES -->
 ## Modo de uso :bulb:
 
-_Por favor dirigete al siguiente documento para [Documentation](https://github.com/WendyBarreda/MIAD_Proyecto/edit/main/)_
+_Por favor dirigete al siguiente documento para [Documentation] https://github.com/WendyBarreda/MIAD_Proyecto _
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -110,11 +107,6 @@ _Por favor dirigete al siguiente documento para [Documentation](https://github.c
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/WendyBarreda/MIAD_Proyecto/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/WendyBarreda/MIAD_Proyecto/forks
 
 [product-screenshot]: Images/api.png
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
