@@ -14,8 +14,8 @@
 
 
 <!-- TABLE OF CONTENTS -->
+## Tabla de Contenido
 <details>
-  <summary>Tabla de contenido</summary>
   <ol>
     <li>
       <a href="#acerca-del-proyecto">Acerca del proyecto</a>
@@ -31,7 +31,7 @@
       </ul>
     </li>
     <li><a href="#modo-de-uso">Modo de Uso</a></li>
-    <li><a href="#desarrolladores-:man_technologist:-:woman_technologist:">Desarrolladores</a></li>
+    <li><a href="#desarrolladores-man_technologist-woman_technologist">Desarrolladores</a></li>
   </ol>
 </details>
 
