@@ -1,14 +1,4 @@
-# Caracterización de adiciones para procesos de contratación publica en infraestructura
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/WendyBarreda/MIAD_Proyecto">
-    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
-  </a>
-</div>
-
+# <img src="Images/logo.jpg" alt="Logo" width="40" height="35"> Caracterización de adiciones para procesos de contratación publica en infraestructura
 
 <!-- TABLE OF CONTENTS -->
 ## Tabla de Contenido :octocat:
@@ -94,7 +84,9 @@ Se necesita un ambiente python
 <!-- USAGE EXAMPLES -->
 ## Modo de uso :bulb:
 
-_Por favor dirigete al siguiente documento para [Documentation] https://github.com/WendyBarreda/MIAD_Proyecto _
+_Por favor dirigete al siguiente documento_
+
+<p><a href="https://github.com/WendyBarreda/MIAD_Proyecto/blob/main/manual.pdf">Manual</a>.</p>
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
