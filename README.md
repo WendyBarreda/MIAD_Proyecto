@@ -39,6 +39,7 @@ Puedes acceder al dashboard y a la API puedes acceder al siguiente [enlace](http
 * [![Python][Python]][Python-url]
 * [![Flask][Flask]][Flask-url]
 * [![scikit-learn][scikit-learn]][scikit-learn-url]
+* [![Jupyter Notebook][Jupyter Notebook]][Jupyter Notebook-url]
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -94,7 +95,7 @@ _Por favor dirigete al siguiente documento_
 ## Desarrolladores :man_technologist: :woman_technologist:
 * Harold Rodríguez
 * Jose Rivera
-* Wendy Barred
+* Wendy Barreda
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -106,5 +107,6 @@ _Por favor dirigete al siguiente documento_
 [Flask-url]: https://flask.palletsprojects.com/en/2.3.x/
 [scikit-learn]: https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white
 [scikit-learn-url]: https://scikit-learn.org/stable/
-
+[Jupyter Notebook]: https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white
+[Jupyter Notebook-url]: https://jupyter.org/
 
