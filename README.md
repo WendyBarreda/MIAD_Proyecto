@@ -1,14 +1,4 @@
-# Caracterización de adiciones para procesos de contratación publica en infraestructura
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/WendyBarreda/MIAD_Proyecto">
-    <img src="images/logo.jpg" alt="Logo" width="80" height="80">
-  </a>
-</div>
-
+# <img src="Images/logo.jpg" alt="Logo" width="40" height="35"> Caracterización de adiciones para procesos de contratación publica en infraestructura
 
 <!-- TABLE OF CONTENTS -->
 ## Tabla de Contenido :octocat:
@@ -37,10 +27,10 @@
 <!-- ABOUT THE PROJECT -->
 ## Acerca del proyecto :bookmark_tabs:
 
-[![Product Name Screen Shot][product-screenshot]](http://ec2-44-204-2-195.compute-1.amazonaws.com:8888/)
-
 Se analizaron datos de los Procesos de Compra pública registrados en el SECOP I desde su implementación, información del proceso, fase de selección y la adjudicación. La información presentada corresponde a la categoría de datos de Estructuras y edificios permanentes del bien o servicio definido en el proceso de compra de acuerdo a sus características principales.
 La finalidad de este proyecto es construir una API que permite estimar la probabilidad que un nuevo contrato presente adiciones. 
+
+Puedes acceder a la API en el siguiente [enlace](https://lookerstudio.google.com/u/0/reporting/09c4c9c1-7389-4096-97a2-969ba6a47a55/page/p_77uk5sr35c)
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -94,7 +84,9 @@ Se necesita un ambiente python
 <!-- USAGE EXAMPLES -->
 ## Modo de uso :bulb:
 
-_Por favor dirigete al siguiente documento para [Documentation] https://github.com/WendyBarreda/MIAD_Proyecto _
+_Por favor dirigete al siguiente documento_
+
+<p><a href="https://github.com/WendyBarreda/MIAD_Proyecto/blob/main/manual.pdf">Manual</a>.</p>
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -108,7 +100,6 @@ _Por favor dirigete al siguiente documento para [Documentation] https://github.c
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[product-screenshot]: Images/api.png
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org/
 [Flask]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
