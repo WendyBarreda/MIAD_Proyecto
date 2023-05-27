@@ -27,10 +27,10 @@
 <!-- ABOUT THE PROJECT -->
 ## Acerca del proyecto :bookmark_tabs:
 
-Se analizaron datos de los Procesos de Compra pública registrados en el SECOP I desde su implementación, información del proceso, fase de selección y la adjudicación. La información presentada corresponde a la categoría de datos de Estructuras y edificios permanentes del bien o servicio definido en el proceso de compra de acuerdo a sus características principales.
-La finalidad de este proyecto es construir una API que permite estimar la probabilidad que un nuevo contrato presente adiciones. 
+Se analizaron datos de los Procesos de Compra pública registrados en el [SECOP I](https://www.datos.gov.co/Gastos-Gubernamentales/SECOP-I-Procesos-de-Compra-P-blica/f789-7hwg) desde su implementación, información del proceso, fase de selección y la adjudicación. La información presentada corresponde a la categoría de datos de Estructuras y edificios permanentes del bien o servicio definido en el proceso de compra de acuerdo con sus características principales.
+La finalidad de este proyecto presentar el panorama general de los datos analizados por medio de un dashboard y construir una API que permite estimar la probabilidad que un NUEVO CONTRATO presente adiciones
 
-Puedes acceder a la API en el siguiente [enlace](https://lookerstudio.google.com/u/0/reporting/09c4c9c1-7389-4096-97a2-969ba6a47a55/page/p_77uk5sr35c)
+Puedes acceder al dashboard y a la API puedes acceder al siguiente [enlace](https://lookerstudio.google.com/u/0/reporting/09c4c9c1-7389-4096-97a2-969ba6a47a55/page/p_77uk5sr35c)
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -39,6 +39,7 @@ Puedes acceder a la API en el siguiente [enlace](https://lookerstudio.google.com
 * [![Python][Python]][Python-url]
 * [![Flask][Flask]][Flask-url]
 * [![scikit-learn][scikit-learn]][scikit-learn-url]
+* [![Jupyter Notebook][Jupyter Notebook]][Jupyter Notebook-url]
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -94,7 +95,7 @@ _Por favor dirigete al siguiente documento_
 ## Desarrolladores :man_technologist: :woman_technologist:
 * Harold Rodríguez
 * Jose Rivera
-* Wendy Barred
+* Wendy Barreda
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
 
@@ -106,5 +107,6 @@ _Por favor dirigete al siguiente documento_
 [Flask-url]: https://flask.palletsprojects.com/en/2.3.x/
 [scikit-learn]: https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white
 [scikit-learn-url]: https://scikit-learn.org/stable/
-
+[Jupyter Notebook]: https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white
+[Jupyter Notebook-url]: https://jupyter.org/
 
