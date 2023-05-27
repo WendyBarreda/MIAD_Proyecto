@@ -15,7 +15,7 @@
       <ul>
         <li><a href="#prerequisitos-key">Prerequisitos</a></li>
         <li><a href="#instalación-computer">Instalación</a></li>
-        <li><a href="#código">Código</a></li>
+        <li><a href="#código-">Código</a></li>
       </ul>
     </li>
     <li><a href="#modo-de-uso-bulb">Modo de Uso</a></li>
