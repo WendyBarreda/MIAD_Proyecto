@@ -15,6 +15,7 @@
       <ul>
         <li><a href="#prerequisitos-key">Prerequisitos</a></li>
         <li><a href="#instalación-computer">Instalación</a></li>
+        <li><a href="#código">Código</a></li>
       </ul>
     </li>
     <li><a href="#modo-de-uso-bulb">Modo de Uso</a></li>
@@ -81,6 +82,10 @@ Se necesita un ambiente python
    ```
 
 <p align="right">(<a href="#tabla-de-contenido-octocat">back to top</a>)</p>
+
+### Código 🤖
+* <p><a href="https://github.com/WendyBarreda/MIAD_Proyecto/blob/main/Procesamiento/Tesis.ipynb">Procesamiento de datos y entrenamiento del modelo</a>.</p>
+* <p><a href="https://github.com/WendyBarreda/MIAD_Proyecto/blob/main/API/api.py">API</a>.</p>
 
 <!-- USAGE EXAMPLES -->
 ## Modo de uso :bulb:
